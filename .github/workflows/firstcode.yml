@@ -1,16 +1,11 @@
-name : Pravin Patil
-on : workflow_dispatch
-env : 
- DAY_OF_WEEK : Wednesday
- job :
-   greeting_job :
-   runs-on : ubuntu-latest
-env :
- greeting : Hello
- steps : 
- -name : "Say Hello with Day"
- run : echo "$ Greetings $First_name. Today is $DAY_OF_WEEK"
+name: Hello World
 
- env :
- First_Name : Pravin
- 
+on: workflow_dispatch
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello World
+        run: echo "Hello World"
